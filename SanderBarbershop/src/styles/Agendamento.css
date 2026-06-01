@@ -1,0 +1,147 @@
+.agendamento-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.agendamento-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.agendamento-card h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.servico-preco {
+  text-align: center;
+  font-size: 24px;
+  color: #4CAF50;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.secao {
+  margin-bottom: 30px;
+}
+
+.secao h3 {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.datas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.data-botao {
+  background: #f0f0f0;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.data-botao:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.data-botao.selecionado {
+  background: #4CAF50;
+  color: white;
+  border-color: #45a049;
+}
+
+.dia-semana {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dia-mes {
+  display: block;
+  font-size: 12px;
+}
+
+.horarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 10px;
+}
+
+.horario-botao {
+  background: #e3f2fd;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.horario-botao:hover:not(.ocupado) {
+  background: #90caf9;
+  transform: translateY(-2px);
+}
+
+.horario-botao.selecionado {
+  background: #4CAF50;
+  color: white;
+}
+
+.horario-botao.ocupado {
+  background: #ffcdd2;
+  color: #c62828;
+  cursor: not-allowed;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.btn-confirmar {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-confirmar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .agendamento-card {
+    padding: 20px;
+  }
+  
+  .datas-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  
+  .horarios-grid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+}

@@ -1,0 +1,95 @@
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.servico-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.servico-nome {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.servico-descricao {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.servico-preco {
+  font-size: 24px;
+  color: #4CAF50;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.servico-btn {
+  background: #ff6b6b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.servico-btn:hover {
+  background: #ff5252;
+}
+
+/* Botões para admin */
+.servico-btn-editar {
+  background: #ff9800;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.servico-btn-editar:hover {
+  background: #fb8c00;
+}
+
+.servico-btn-deletar {
+  background: #dc3545;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.servico-btn-deletar:hover {
+  background: #c82333;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+  color: #666;
+}
